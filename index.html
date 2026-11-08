@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#100b20">
+  <title>Morsalin BG Remover</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <main class="app">
+    <header><div class="logo">M</div><div><h1>Morsalin <span>BG Remover</span></h1><p>Remove backgrounds. Keep what matters.</p></div></header>
+    <section class="hero">
+      <div class="eyebrow">FREE · PRIVATE · AI POWERED</div>
+      <h2>Make your subject<br><span>stand out.</span></h2>
+      <p class="intro">Remove image backgrounds right in your browser. Your image stays on your device.</p>
+      <label class="upload" id="dropzone">
+        <input id="file" type="file" accept="image/png,image/jpeg,image/webp">
+        <span class="upload-icon">↑</span><strong>Choose an image</strong>
+        <small>or drag and drop it here · PNG, JPG, WEBP · max 15 MB</small>
+      </label>
+      <div id="status" role="status">Choose an image to get started.</div>
+    </section>
+    <section id="editor" class="editor" hidden>
+      <div class="preview-wrap"><div class="preview" id="preview"><img id="result" alt="Background removed preview"></div></div>
+      <div class="tools">
+        <div class="tabs"><button class="tab active" data-view="result">Result</button><button class="tab" data-view="original">Original</button></div>
+        <p class="tool-label">Preview background</p>
+        <div class="swatches">
+          <button class="swatch checker selected" data-color="transparent" aria-label="Transparent"></button>
+          <button class="swatch white" data-color="#ffffff" aria-label="White"></button>
+          <button class="swatch black" data-color="#171522" aria-label="Dark"></button>
+          <button class="swatch lavender" data-color="#c8b5ff" aria-label="Lavender"></button>
+          <label class="custom">＋<input type="color" id="customColor" value="#a78bfa" aria-label="Custom color"></label>
+        </div>
+        <button id="download" class="download" disabled>Download transparent PNG ↓</button>
+        <button id="reset" class="reset">Remove another background</button>
+      </div>
+    </section>
+    <footer>Made with care by Morsalin · Processing runs locally in your browser.</footer>
+  </main>
+  <script type="module" src="/src/main.js"></script>
+</body></html>
